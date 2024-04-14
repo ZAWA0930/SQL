@@ -1,0 +1,12 @@
+アプリ運用中にデータベース変更があった場合
+https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/cli.html
+
+set FLASK_APP=app.py
+#最初のみ実行
+flask db init
+
+#==データベース変更時に実行==
+#変更に必要なスクリプト作成
+flask db migrate
+#データベースに反映
+flask db upgrade
